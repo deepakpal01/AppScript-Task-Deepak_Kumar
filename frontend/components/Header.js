@@ -113,19 +113,32 @@ export default function Header() {
 
       {/* Mobile menu overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setMobileMenuOpen(false)}>
+        <>
+          {/* Backdrop */}
+          <div 
+            className="lg:hidden fixed inset-0 z-40 bg-black/50" 
+            onClick={() => setMobileMenuOpen(false)}
+            aria-hidden="true"
+          />
+          {/* Navigation panel */}
           <nav 
-            className="bg-white w-72 h-full p-6 flex flex-col gap-4"
-            onClick={(e) => e.stopPropagation()}
+            className="lg:hidden fixed left-0 top-0 z-50 bg-white w-72 h-full p-6 flex flex-col gap-4"
             data-testid="mobile-nav"
           >
-            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border">Shop</a>
-            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border">Skills</a>
-            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border">Stories</a>
-            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border">About</a>
-            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border">Contact Us</a>
+            <button 
+              onClick={() => setMobileMenuOpen(false)}
+              className="self-end p-2 mb-4"
+              aria-label="Close menu"
+            >
+              <X size={24} />
+            </button>
+            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border hover:text-gray-600">Shop</a>
+            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border hover:text-gray-600">Skills</a>
+            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border hover:text-gray-600">Stories</a>
+            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border hover:text-gray-600">About</a>
+            <a href="#" className="text-base py-2 uppercase tracking-wider border-b border-border hover:text-gray-600">Contact Us</a>
           </nav>
-        </div>
+        </>
       )}
     </header>
   )
