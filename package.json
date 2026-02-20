@@ -1,0 +1,22 @@
+{
+  "name": "appscrip-task-deepak_kumar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ravipal123/Appscrip-task-Deepak_Kumar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ravipal123/Appscrip-task-Deepak_Kumar/issues"
+  },
+  "homepage": "https://github.com/Ravipal123/Appscrip-task-Deepak_Kumar#readme"
+}
